@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42C17A8A-0CE5-4305-A073-8D7E6EBBF698}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnbarProgrami</RootNamespace>
+    <AssemblyName>AnbarProgrami</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel.4.5, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.2.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ExcelDataReader.3.2.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.2\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.105.2\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.2\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlisZavodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlisZavodForm.Designer.cs">
+      <DependentUpon>AlisZavodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AOBMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AOBMehsul.Designer.cs">
+      <DependentUpon>AOBMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hesabatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hesabatForm.Designer.cs">
+      <DependentUpon>hesabatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comboboxItem.cs" />
+    <Compile Include="factoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="factoryForm.Designer.cs">
+      <DependentUpon>factoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KategoriyaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KategoriyaForm.Designer.cs">
+      <DependentUpon>KategoriyaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logForm.Designer.cs">
+      <DependentUpon>logForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="marketForm.Designer.cs">
+      <DependentUpon>marketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homeForm.Designer.cs">
+      <DependentUpon>homeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOBorc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MOBorc.Designer.cs">
+      <DependentUpon>MOBorc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MQBMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MQBMehsul.Designer.cs">
+      <DependentUpon>MQBMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MQMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MQMehsul.Designer.cs">
+      <DependentUpon>MQMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVBMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVBMehsul.Designer.cs">
+      <DependentUpon>MVBMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVMehsul.Designer.cs">
+      <DependentUpon>MVMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdenisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdenisForm.Designer.cs">
+      <DependentUpon>OdenisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productForm.Designer.cs">
+      <DependentUpon>productForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchaseForm.Designer.cs">
+      <DependentUpon>purchaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesForm.Designer.cs">
+      <DependentUpon>salesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SatisMarketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatisMarketForm.Designer.cs">
+      <DependentUpon>SatisMarketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AOMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AOMehsul.Designer.cs">
+      <DependentUpon>AOMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="umumiMelumatlar.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="userForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userForm.Designer.cs">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="workerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="workerForm.Designer.cs">
+      <DependentUpon>workerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZABMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZABMehsul.Designer.cs">
+      <DependentUpon>ZABMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZAMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZAMehsul.Designer.cs">
+      <DependentUpon>ZAMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZOBorc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZOBorc.Designer.cs">
+      <DependentUpon>ZOBorc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZQBMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZQBMehsul.Designer.cs">
+      <DependentUpon>ZQBMehsul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZQMehsul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZQMehsul.Designer.cs">
+      <DependentUpon>ZQMehsul.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlisZavodForm.resx">
+      <DependentUpon>AlisZavodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AOBMehsul.resx">
+      <DependentUpon>AOBMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hesabatForm.resx">
+      <DependentUpon>hesabatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="factoryForm.resx">
+      <DependentUpon>factoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeForm.resx">
+      <DependentUpon>homeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KategoriyaForm.resx">
+      <DependentUpon>KategoriyaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logForm.resx">
+      <DependentUpon>logForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="marketForm.resx">
+      <DependentUpon>marketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOBorc.resx">
+      <DependentUpon>MOBorc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MQBMehsul.resx">
+      <DependentUpon>MQBMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MQMehsul.resx">
+      <DependentUpon>MQMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVBMehsul.resx">
+      <DependentUpon>MVBMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVMehsul.resx">
+      <DependentUpon>MVMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdenisForm.resx">
+      <DependentUpon>OdenisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productForm.resx">
+      <DependentUpon>productForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="purchaseForm.resx">
+      <DependentUpon>purchaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesForm.resx">
+      <DependentUpon>salesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SatisMarketForm.resx">
+      <DependentUpon>SatisMarketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AOMehsul.resx">
+      <DependentUpon>AOMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userForm.resx">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="workerForm.resx">
+      <DependentUpon>workerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZABMehsul.resx">
+      <DependentUpon>ZABMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZAMehsul.resx">
+      <DependentUpon>ZAMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZOBorc.resx">
+      <DependentUpon>ZOBorc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZQBMehsul.resx">
+      <DependentUpon>ZQBMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZQMehsul.resx">
+      <DependentUpon>ZQMehsul.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="db\AnbarProgram.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.Linq.Binary.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ChangeConflictCollection.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ChangeConflictException.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ChangeSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.CompiledQuery.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.DataContext.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.DataLoadOptions.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.DBConvert.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.DuplicateKeyException.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.IExecuteResult.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.IFunctionResult.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.IMultipleResults.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ITable.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.AssociationAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.AttributeMappingSource.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.ColumnAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.DataAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.DatabaseAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.FunctionAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.InheritanceMappingAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MappingSource.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaAccessor.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaAssociation.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaDataMember.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaFunction.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaModel.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaParameter.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaTable.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.MetaType.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.ParameterAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.ProviderAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.ResultTypeAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.TableAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.Mapping.XmlMappingSource.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.MemberChangeConflict.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ModifiedMemberInfo.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.ObjectChangeConflict.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.Sql2000Provider.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.Sql2005Provider.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.Sql2008Provider.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.SqlHelpers.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.SqlMethods.datasource" />
+    <None Include="Properties\DataSources\System.Data.Linq.SqlClient.SqlProvider.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.AssemblySourceIdAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.AssemblySourceTimeStampAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.AuthorizerEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.CollationSequence.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.CommitEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ConnectionEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.EF6.SQLiteProviderFactory.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ISQLiteConnectionPool.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ISQLiteManagedModule.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ISQLiteNativeHandle.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ISQLiteNativeModule.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ISQLiteSchemaExtensions.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.Linq.SQLiteProviderFactory.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.LogEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.ProgressEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteAuthorizerEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteBackupCallback.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteBindValueCallback.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteBlob.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteCallback.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteCommand.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteCommitHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteCompareDelegate.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteConnection.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteConnectionEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteContext.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteConvert.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteDataAdapter.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteDataReader.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteDataReaderValue.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteDelegateFunction.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteException.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteFactory.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteFinalDelegate.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteFunction.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteFunctionAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteFunctionEx.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndex.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndexConstraint.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndexConstraintUsage.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndexInputs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndexOrderBy.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteIndexOutputs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteInvokeDelegate.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteLog.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteLogEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteMetaDataCollectionNames.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteModule.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteModuleCommon.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteModuleEnumerable.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteModuleNoop.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteParameter.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteParameterCollection.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteProgressEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteReadArrayEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteReadBlobEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteReadEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteReadValueCallback.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteReadValueEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteStepDelegate.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteTraceEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteTransaction.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteTransaction2.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteTransactionBase.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteTypeCallbacks.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteUpdateEventHandler.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteValue.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteVirtualTable.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteVirtualTableCursor.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.SQLiteVirtualTableCursorEnumerator.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.TraceEventArgs.datasource" />
+    <None Include="Properties\DataSources\System.Data.SQLite.UpdateEventArgs.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="report\XtraReportAlis.repx" />
+    <None Include="report\XtraReportSatis.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
